@@ -1,10 +1,10 @@
 import CarCard from "../CarCard/CarCard";
-import CarsData from "../CarsData";
+import cars from "../../../data/cars";
 import React from 'react';
 
 const PopularCars = ({ searchQuery }) => {
     console.log('Current Search Query:', searchQuery);
-    const filteredCars = CarsData.filter((car) =>
+    const filteredCars = cars.filter((car) =>
       searchQuery
         ? car.name.toLowerCase().includes(searchQuery.toLowerCase())
         : true // Если searchQuery пустой, возвращаем все машины

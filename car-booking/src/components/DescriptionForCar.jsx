@@ -36,9 +36,7 @@ const CarInfo = ({ car }) => {
               <i className="fas fa-star-half-alt text-warning"></i>
               <span className="text-muted">440+ Reviewer</span>
             </div>
-            <p className="card-text text-muted">
-              NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most unforgiving proving ground, the "race track".
-            </p>
+            <p className="card-text text-muted">{car.description}</p>
 
             {/* Характеристики */}
             <div className="row mt-4">

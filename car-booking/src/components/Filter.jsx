@@ -31,12 +31,12 @@ const Filter = ({ activeTypes, setActiveTypes, activeCapacities, setActiveCapaci
       <h6 className="type">T Y P E</h6>
       <ul className="filter-type">
         {[
-          { label: 'Sport', count: 10 },
           { label: 'SUV', count: 12 },
-          { label: 'MVP', count: 16 },
-          { label: 'Sedan', count: 20 },
-          { label: 'Coupe', count: 14 },
           { label: 'Hatchback', count: 14 },
+          { label: 'Subcompact Hatchback', count: 14 },
+          { label: 'Сrossover', count: 14 },
+          { label: 'Minivan', count: 14 },
+
         ].map(({ label, count }) => (
           <li key={label}>
             <span

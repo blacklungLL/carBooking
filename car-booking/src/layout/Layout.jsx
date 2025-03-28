@@ -4,14 +4,12 @@ import Footer from '../components/Footer';
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
-  const [searchQuery, setSearchQuery] = useState(''); // Создаем состояние для поиска
+  const [searchQuery, setSearchQuery] = useState('');
 
   return (
     <div>
-      {/* Передаем состояние и обработчик в Header */}
       <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <main>
-        {/* Передаем searchQuery в дочерние компоненты через контекст или пропсы */}
         <Outlet context={{ searchQuery }} />
       </main>
       <Footer />

@@ -1,10 +1,11 @@
 import React from 'react';
+import cars from '../../data/cars';
 import CarCard from "./CarCard/CarCard";
-import CarsData from "./CarsData";
+
 
 const CategoryCarCards = ({ searchQuery, activeTypes, activeCapacities, price }) => {
   // Фильтрация данных
-  const filteredCars = CarsData.filter((car) => {
+  const filteredCars = cars.filter((car) => {
     // Фильтр поиска
     const matchesSearch = searchQuery
       ? car.name.toLowerCase().includes(searchQuery.toLowerCase())

@@ -3,12 +3,11 @@ import RecommendationCars from "./RecommendationCars/RecommendationCars";
 import { useOutletContext } from 'react-router-dom';
 
 const CarCards = () => {
-  const { searchQuery } = useOutletContext(); // Получаем searchQuery из контекста
+  const { searchQuery } = useOutletContext();
 
   return (
     <>
       <section className="cars-cards">
-        {/* Передаем searchQuery в PopularCars */}
         <PopularCars searchQuery={searchQuery} />
         <RecommendationCars searchQuery={searchQuery}/>
       </section>
