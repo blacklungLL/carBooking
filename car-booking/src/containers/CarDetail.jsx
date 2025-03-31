@@ -8,14 +8,28 @@ import { useParams } from 'react-router-dom';
 import cars from '../data/cars';
 
 const CarDetail = () => {
+  const [cardOfCar, setCars] = useState([]);
+  const { id } = useParams();
+  useEffect(() => {
+    fetch(`http://localhost:5156/api/Cars/${id}`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      setCars(data);
+      console.log(data);
+    })
+    .catch((error) => {
+      console.error("Ошибка при загрузке данных:", error);
+    });
+  }, [id]);
+
   const location = useLocation();
   const navigate = useNavigate(); 
   const { searchQuery } = useOutletContext();
 
-  // Парсим query-параметры из URL
   const queryParams = new URLSearchParams(location.search);
 
-  // Инициализация состояний из URL
   const [activeTypes, setActiveTypes] = useState(() =>
     queryParams.get('types') ? queryParams.get('types').split(',') : []
   );
@@ -26,7 +40,6 @@ const CarDetail = () => {
     queryParams.get('price') ? parseFloat(queryParams.get('price')) : 100
   );
 
-  // Функция для обновления URL
   const updateURL = () => {
     const params = new URLSearchParams();
 
@@ -61,9 +74,8 @@ const CarDetail = () => {
     updateURL();
   }, [activeTypes, activeCapacities, price, searchQuery]);
 
-  const { id } = useParams();
   const carId = parseInt(id, 10);
-  const car = cars.find(car => car.id === carId);
+  const car = cardOfCar && cardOfCar.id === carId ? cardOfCar : null;
 
   if (!car) {
     return <div>Car not found</div>;

@@ -1,25 +1,23 @@
 import React from 'react';
 
 const Filter = ({ activeTypes, setActiveTypes, activeCapacities, setActiveCapacities, price, setPrice }) => {
-  // Обработчик клика по чекбоксам типа
+
   const handleTypeClick = (label) => {
     setActiveTypes((prevActive) =>
       prevActive.includes(label)
-        ? prevActive.filter((item) => item !== label) // Удалить, если уже активен
-        : [...prevActive, label] // Добавить, если не активен
+        ? prevActive.filter((item) => item !== label)
+        : [...prevActive, label]
     );
   };
 
-  // Обработчик клика по чекбоксам вместимости
   const handleCapacityClick = (label) => {
     setActiveCapacities((prevActive) =>
       prevActive.includes(label)
-        ? prevActive.filter((item) => item !== label) // Удалить, если уже активен
-        : [...prevActive, label] // Добавить, если не активен
+        ? prevActive.filter((item) => item !== label)
+        : [...prevActive, label]
     );
   };
 
-  // Обработчик изменения ползунка
   const handlePriceChange = (event) => {
     const value = event.target.value;
     setPrice(value);
@@ -27,7 +25,6 @@ const Filter = ({ activeTypes, setActiveTypes, activeCapacities, setActiveCapaci
 
   return (
     <div className="filter">
-      {/* Тип */}
       <h6 className="type">T Y P E</h6>
       <ul className="filter-type">
         {[
@@ -50,14 +47,13 @@ const Filter = ({ activeTypes, setActiveTypes, activeCapacities, setActiveCapaci
         ))}
       </ul>
 
-      {/* Вместимость */}
       <h6 className="capacity">C A P A C I T Y</h6>
       <ul className="capacity-of-car">
         {[
           { label: '2 Person', count: 10 },
           { label: '4 Person', count: 14 },
           { label: '5 Person', count: 12 },
-          { label: '6 Person', count: 16 },
+          { label: '7 Person', count: 16 },
         ].map(({ label, count }) => (
           <li key={label}>
             <span
@@ -71,7 +67,6 @@ const Filter = ({ activeTypes, setActiveTypes, activeCapacities, setActiveCapaci
         ))}
       </ul>
 
-      {/* Цена */}
       <h6 className="filter-price">P R I C E</h6>
       <div className="pricerange">
         <input

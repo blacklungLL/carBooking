@@ -1,13 +1,25 @@
 import CarCard from "../CarCard/CarCard";
-import cars from "../../../data/cars";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const PopularCars = ({ searchQuery }) => {
     console.log('Current Search Query:', searchQuery);
-    const filteredCars = cars.filter((car) =>
+    const [cardsOfCars, setCars] = useState([]);
+    useEffect(() => {
+      fetch("http://localhost:5156/api/Cars/all")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          setCars(data);
+        })
+        .catch((error) => {
+          console.error("Ошибка при загрузке данных:", error);
+        });
+    }, []);
+    const filteredCars = cardsOfCars.filter((car) =>
       searchQuery
         ? car.name.toLowerCase().includes(searchQuery.toLowerCase())
-        : true // Если searchQuery пустой, возвращаем все машины
+        : true
 );
 
     return (

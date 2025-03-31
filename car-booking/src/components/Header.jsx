@@ -4,7 +4,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
     const handleInputChange = (e) => {
       const value = e.target.value;
       if (setSearchQuery) {
-        setSearchQuery(value); // Обновляем состояние поиска
+        setSearchQuery(value);
       }
     };
     return (

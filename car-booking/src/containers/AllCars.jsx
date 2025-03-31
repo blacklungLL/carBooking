@@ -9,10 +9,8 @@ const AllCars = () => {
   const navigate = useNavigate();
   const { searchQuery } = useOutletContext();
 
-  // Парсим query-параметры из URL
   const queryParams = new URLSearchParams(location.search);
 
-  // Инициализация состояний из URL
   const [activeTypes, setActiveTypes] = useState(() =>
     queryParams.get('types') ? queryParams.get('types').split(',') : []
   );
@@ -23,7 +21,6 @@ const AllCars = () => {
     queryParams.get('price') ? parseFloat(queryParams.get('price')) : 100
   );
 
-  // Функция для обновления URL
   const updateURL = () => {
     const params = new URLSearchParams();
 
