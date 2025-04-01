@@ -21,8 +21,8 @@ const BillingInfo = () => {
           </div>
 
           <div className="col-md-6">
-            <label htmlFor="phoneNumber" className="form-label">Email</label>
-            <input type="tel" className="form-control custom-input" id="phoneNumber" placeholder="Email" style={{ backgroundColor: '#F6F7F9'}} />
+            <label htmlFor="Email" className="form-label">Email</label>
+            <input type="Email" className="form-control custom-input" id="Email" placeholder="Email" style={{ backgroundColor: '#F6F7F9'}} />
           </div>
 
           <div className="col-md-6">
