@@ -5,31 +5,23 @@ import { useLocation, useNavigate, useOutletContext } from 'react-router-dom';
 import CarInfo from '../components/DescriptionForCar';
 import Reviews from '../components/Reviews';
 import { useParams } from 'react-router-dom';
-import cars from '../data/cars';
 
 const CarDetail = () => {
   const [cardOfCar, setCars] = useState([]);
   const { id } = useParams();
+
   useEffect(() => {
     fetch(`http://localhost:5156/api/Cars/${id}`)
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      setCars(data);
-      console.log(data);
-    })
-    .catch((error) => {
-      console.error("Ошибка при загрузке данных:", error);
-    });
+      .then((response) => response.json())
+      .then((data) => setCars(data))
+      .catch((error) => console.error("Ошибка при загрузке данных:", error));
   }, [id]);
 
   const location = useLocation();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const { searchQuery } = useOutletContext();
 
   const queryParams = new URLSearchParams(location.search);
-
   const [activeTypes, setActiveTypes] = useState(() =>
     queryParams.get('types') ? queryParams.get('types').split(',') : []
   );
@@ -42,31 +34,26 @@ const CarDetail = () => {
 
   const updateURL = () => {
     const params = new URLSearchParams();
-
     if (activeTypes.length > 0) {
       params.set('types', activeTypes.join(','));
     } else {
       params.delete('types');
     }
-
     if (activeCapacities.length > 0) {
       params.set('capacities', activeCapacities.join(','));
     } else {
       params.delete('capacities');
     }
-
     if (price !== 100) {
-      params.set('price', price);
+      params.set('maxPrice', price);
     } else {
       params.delete('price');
     }
-
     if (searchQuery) {
       params.set('query', searchQuery);
     } else {
       params.delete('query');
     }
-
     navigate({ search: params.toString() });
   };
 

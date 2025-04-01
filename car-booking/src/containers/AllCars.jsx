@@ -10,7 +10,6 @@ const AllCars = () => {
   const { searchQuery } = useOutletContext();
 
   const queryParams = new URLSearchParams(location.search);
-
   const [activeTypes, setActiveTypes] = useState(() =>
     queryParams.get('types') ? queryParams.get('types').split(',') : []
   );
@@ -23,36 +22,28 @@ const AllCars = () => {
 
   const updateURL = () => {
     const params = new URLSearchParams();
-
     if (activeTypes.length > 0) {
       params.set('types', activeTypes.join(','));
     } else {
       params.delete('types');
     }
-
     if (activeCapacities.length > 0) {
       params.set('capacities', activeCapacities.join(','));
     } else {
       params.delete('capacities');
     }
-
     if (price !== 100) {
-      params.set('price', price);
+      params.set('maxPrice', price);
     } else {
       params.delete('price');
     }
-
-
     if (searchQuery) {
       params.set('query', searchQuery);
     } else {
       params.delete('query');
     }
-
-
     navigate({ search: params.toString() });
   };
-
 
   useEffect(() => {
     updateURL();

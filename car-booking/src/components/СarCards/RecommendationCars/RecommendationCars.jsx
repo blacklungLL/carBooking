@@ -15,7 +15,6 @@ const RecommendationCars = ({ searchQuery }) => {
         console.error("Ошибка при загрузке данных:", error);
       });
   }, []);
-  // Фильтрация данных
   const filteredCars = cardsOfCars.filter((car) =>
     searchQuery
       ? car.name.toLowerCase().includes(searchQuery.toLowerCase())

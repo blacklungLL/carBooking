@@ -53,7 +53,7 @@ const Filter = ({ activeTypes, setActiveTypes, activeCapacities, setActiveCapaci
           { label: '2 Person', count: 10 },
           { label: '4 Person', count: 14 },
           { label: '5 Person', count: 12 },
-          { label: '7 Person', count: 16 },
+          { label: '6 Person', count: 16 },
         ].map(({ label, count }) => (
           <li key={label}>
             <span
