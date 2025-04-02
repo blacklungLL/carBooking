@@ -866,3 +866,7 @@ background-blue {
 .form-check-input {
   accent-color: #0d6efd; /* Голубой цвет для маркеров */
 }
+
+.image_of_car {
+  width: 100px; /* Размер автомобиля */
+}

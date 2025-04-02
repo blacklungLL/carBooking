@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 
 const CarDetail = () => {
   const [cardOfCar, setCars] = useState([]);
+  const [reviews, setReview] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -64,9 +65,19 @@ const CarDetail = () => {
   const carId = parseInt(id, 10);
   const car = cardOfCar && cardOfCar.id === carId ? cardOfCar : null;
 
+  useEffect(() =>{
+    fetch(`http://localhost:5156/api/Comments/Comment/${id}`)
+    .then(async(response) =>{
+      let data = await response.json();
+      setReview(data);
+      console.log(data);
+    })
+  }, [id])
+
   if (!car) {
     return <div>Car not found</div>;
   }
+
 
   return (
     <div className="AllCars">
@@ -80,7 +91,7 @@ const CarDetail = () => {
       />
       <div className="blocks">
         <CarInfo car={car} />
-        <Reviews />
+        <Reviews reviews={reviews}/>
         <CategoryCarCards
           searchQuery={searchQuery}
           activeTypes={activeTypes}

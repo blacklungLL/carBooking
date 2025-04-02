@@ -17,7 +17,7 @@ function App() {
           <Route index element={<HomeRent searchQuery={searchQuery}/>} />
           <Route path='Category' element={<CategoryCar />} />
           <Route path='/DetailCar/:id' element={<DetailCar />} />
-          <Route path='PaymentCar' element={<PaymentCar />} />
+          <Route path='PaymentCar/:id' element={<PaymentCar />} />
         </Route>
       </Routes>
     </div>

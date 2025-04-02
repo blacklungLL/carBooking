@@ -61,7 +61,7 @@ const CarInfo = ({ car }) => {
             {/* Цена и кнопка */}
             <div className="d-flex justify-content-between align-items-center mt-5">
               <h2 className="fw-bold">${car.price}.00 / days</h2>
-              <a href="#" className="btn btn-primary btn-lg">Rent Now</a>
+              <a href={`/PaymentCar/${car.id}`} className="btn btn-primary btn-lg">Rent Now</a>
             </div>
           </div>
         </div>

@@ -43,7 +43,7 @@ const PaymentFields = () => {
           {selectedMethod === 'creditCard' && (
             <form>
               <div className="row g-3">
-                <div className="col-md-6">
+                <div className="col-md-6 mb-3">
                   <label htmlFor="cardNumber" className="form-label">
                     Card Number
                   </label>
