@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import { FormContext } from './FormContext';
+import React, { useState, useContext } from 'react';
 
 const PaymentFields = () => {
+  const { formData, updateFormData } = useContext(FormContext);
   const [selectedMethod, setSelectedMethod] = useState('creditCard');
 
   const handleRadioChange = (event) => {
     setSelectedMethod(event.target.value);
+  };
+
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    updateFormData('payment', { [id]: value });
   };
 
   return (
@@ -52,6 +59,8 @@ const PaymentFields = () => {
                     className="form-control"
                     id="cardNumber"
                     placeholder="Card number"
+                    value={formData.payment.cardNumber}
+                    onChange={handleInputChange}
                   />
                 </div>
                 <div className="col-md-6">
@@ -63,6 +72,8 @@ const PaymentFields = () => {
                     className="form-control"
                     id="expirationDate"
                     placeholder="DD/MM/YY"
+                    value={formData.payment.expirationDate}
+                    onChange={handleInputChange}
                   />
                 </div>
                 <div className="col-md-6">
@@ -74,6 +85,8 @@ const PaymentFields = () => {
                     className="form-control"
                     id="cardHolder"
                     placeholder="Card holder"
+                    value={formData.payment.cardHolder}
+                    onChange={handleInputChange}
                   />
                 </div>
                 <div className="col-md-6">
@@ -85,6 +98,8 @@ const PaymentFields = () => {
                     className="form-control"
                     id="cvc"
                     placeholder="CVC"
+                    value={formData.payment.cvc}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>

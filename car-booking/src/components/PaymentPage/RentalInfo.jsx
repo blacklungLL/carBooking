@@ -1,6 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { FormContext } from './FormContext';
 
 const RentalInfo = () => {
+  const { formData, updateFormData } = useContext(FormContext);
+
+  const handleSelectChange = (e) => {
+      const { id, value } = e.target;
+      updateFormData('rental', { [id]: value });
+  };
   return (
     <div className="container mt-4">
       <div className="card p-4">
@@ -25,7 +32,12 @@ const RentalInfo = () => {
           <div className="row g-3">
             <div className="col-md-6">
               <label htmlFor="pickupLocation" className="form-label">Locations</label>
-              <select className="form-select custom-select" id="pickupLocation">
+              <select 
+                className="form-select custom-select" 
+                id="pickupLocation"
+                value={formData.rental.pickupLocation}
+                onChange={handleSelectChange}
+              >
                 <option value="" disabled selected hidden>Select your city</option>
                 <option>New York</option>
                 <option>Moscow</option>
@@ -34,7 +46,12 @@ const RentalInfo = () => {
             </div>
             <div className="col-md-6">
               <label htmlFor="pickupDate" className="form-label">Date</label>
-              <select className="form-select custom-select" id="pickupDate">
+              <select 
+                className="form-select custom-select" 
+                id="pickupDate"
+                value={formData.rental.pickupDate}
+                onChange={handleSelectChange}
+              >
                 <option value="" disabled selected hidden>Select your date</option>
                 <option>Today</option>
                 <option>Tomorrow</option>
@@ -43,7 +60,12 @@ const RentalInfo = () => {
             </div>
             <div className="mt-3 col-md-6">
               <label htmlFor="pickupTime" className="form-label">Time</label>
-              <select className="form-select custom-select" id="pickupTime">
+              <select 
+                className="form-select custom-select" 
+                id="pickupTime"
+                value={formData.rental.pickupTime}
+                onChange={handleSelectChange}
+              >
                 <option value="" disabled selected hidden>Select your time</option>
                 <option>15:00</option>
                 <option>18:00</option>
@@ -64,7 +86,12 @@ const RentalInfo = () => {
           <div className="row g-3">
             <div className="col-md-6">
               <label htmlFor="dropOffLocation" className="form-label">Locations</label>
-              <select className="form-select custom-select" id="dropOffLocation">
+              <select 
+                className="form-select custom-select" 
+                id="dropOffLocation"
+                value={formData.rental.dropOffLocation}
+                onChange={handleSelectChange}
+              >
                 <option value="" disabled selected hidden>Select your city</option>
                 <option>New York</option>
                 <option>Moscow</option>
@@ -73,7 +100,12 @@ const RentalInfo = () => {
             </div>
             <div className="col-md-6">
               <label htmlFor="dropOffDate" className="form-label">Date</label>
-              <select className="form-select custom-select" id="dropOffDate">
+              <select 
+                className="form-select custom-select" 
+                id="dropOffDate"
+                value={formData.rental.dropOffDate}
+                onChange={handleSelectChange}
+              >
                 <option value="" disabled selected hidden>Select your date</option>
                 <option>Today</option>
                 <option>Tomorrow</option>
@@ -82,7 +114,12 @@ const RentalInfo = () => {
             </div>
             <div className="mt-3 col-md-6">
               <label htmlFor="dropOffTime" className="form-label">Time</label>
-              <select className="form-select custom-select" id="dropOffTime">
+              <select 
+                className="form-select custom-select" 
+                id="dropOffTime"
+                value={formData.rental.dropOffTime}
+                onChange={handleSelectChange}
+              >
                 <option value="" disabled selected hidden>Select your time</option>
                 <option>16:00</option>
                 <option>19:00</option>

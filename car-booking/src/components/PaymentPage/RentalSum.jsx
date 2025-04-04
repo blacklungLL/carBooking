@@ -53,5 +53,3 @@ const RentalSum = ({ car }) => {
 };
 
 export default RentalSum;
-
-//AHMEDVARD

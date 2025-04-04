@@ -5,6 +5,7 @@ import PaymentFields from "../components/PaymentPage/PaymentFields";
 import RentalInfo from "../components/PaymentPage/RentalInfo";
 import RentalSum from "../components/PaymentPage/RentalSum";
 import { useParams } from 'react-router-dom';
+import { FormProvider } from "../components/PaymentPage/FormContext";
 
 const Payment = () => {
     const [cardOfCar, setCars] = useState([]);
@@ -27,12 +28,14 @@ const Payment = () => {
     return(
         <>
             <div className="d-flex">
-                <div className="left-section">
-                    <BillingInfo />
-                    <RentalInfo />
-                    <PaymentFields />
-                    <Confirmation />
-                </div>
+                <FormProvider>
+                    <div className="left-section">
+                        <BillingInfo />
+                        <RentalInfo />
+                        <PaymentFields />
+                        <Confirmation />
+                    </div>
+                </FormProvider>
                 <RentalSum car={car}/>
             </div>
 

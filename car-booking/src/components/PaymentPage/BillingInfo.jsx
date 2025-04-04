@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { FormContext } from './FormContext';
 
 const BillingInfo = () => {
+  const {formData, updateFormData} = useContext(FormContext)
+
+  const handleInputChange = (e) => {
+      const { id, value } = e.target;
+      updateFormData('billing', { [id]: value });
+  };
+
   return (
     <div className="container mt-4">
       <div className="card p-4">
@@ -17,22 +25,50 @@ const BillingInfo = () => {
         <div className="row g-3">
           <div className="col-md-6 mb-4">
             <label htmlFor="name" className="form-label">Name</label>
-            <input type="text" className="form-control custom-input" id="name" placeholder="Your name" style={{ backgroundColor: '#F6F7F9'}} />
+            <input 
+              type="text" 
+              className="form-control custom-input"
+              id="name"
+              placeholder="Your name"
+              value={formData.billing.name}
+              onChange={handleInputChange}
+              style={{ backgroundColor: '#F6F7F9'}} />
           </div>
 
           <div className="col-md-6">
-            <label htmlFor="Email" className="form-label">Email</label>
-            <input type="Email" className="form-control custom-input" id="Email" placeholder="Email" style={{ backgroundColor: '#F6F7F9'}} />
+            <label htmlFor="email" className="form-label">Email</label>
+            <input
+              type="email"
+              className="form-control custom-input"
+              id="email" 
+              placeholder="Email" 
+              value={formData.billing.email}
+              onChange={handleInputChange}
+              style={{ backgroundColor: '#F6F7F9'}} />
           </div>
 
           <div className="col-md-6">
             <label htmlFor="address" className="form-label">Address</label>
-            <input type="text" className="form-control custom-input" id="address" placeholder="Address" style={{ backgroundColor: '#F6F7F9'}}/>
+            <input 
+              type="text" 
+              className="form-control custom-input" 
+              id="address" 
+              placeholder="Address" 
+              value={formData.billing.address}
+              onChange={handleInputChange}
+              style={{ backgroundColor: '#F6F7F9'}}/>
           </div>
 
           <div className="col-md-6">
             <label htmlFor="townCity" className="form-label">Town / City</label>
-            <input type="text" className="form-control custom-input" id="townCity" placeholder="Town or city" style={{ backgroundColor: '#F6F7F9'}}/>
+            <input 
+              type="text" 
+              className="form-control custom-input" 
+              id="townCity" 
+              placeholder="Town or city" 
+              value={formData.billing.townCity}
+              onChange={handleInputChange}
+              style={{ backgroundColor: '#F6F7F9'}}/>
           </div>
         </div>
       </div>
