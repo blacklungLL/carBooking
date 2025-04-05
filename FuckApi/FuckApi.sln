@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuckApi", "FuckApi\FuckApi.csproj", "{CEFD5430-DDA5-4850-94F9-9FBBC92CFF60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEFD5430-DDA5-4850-94F9-9FBBC92CFF60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEFD5430-DDA5-4850-94F9-9FBBC92CFF60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEFD5430-DDA5-4850-94F9-9FBBC92CFF60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEFD5430-DDA5-4850-94F9-9FBBC92CFF60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
