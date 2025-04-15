@@ -16,7 +16,7 @@ function CategoryCarCards({ searchQuery, activeTypes, activeCapacities, price })
       queryParams.set('maxPrice', price);
     }
     if (searchQuery) {
-      queryParams.set('query', searchQuery);
+      queryParams.set('name', searchQuery);
     }
 
     fetch(`http://localhost:5156/api/Cars/filter?${queryParams.toString()}`)
