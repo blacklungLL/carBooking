@@ -5,7 +5,7 @@ const PopularCars = ({ searchQuery }) => {
     console.log('Current Search Query:', searchQuery);
     const [cardsOfCars, setCars] = useState([]);
     useEffect(() => {
-      fetch("http://localhost:5156/api/Cars/all")
+      fetch("http://efimov.somee.com/api/Cars/all")
         .then((response) => {
           return response.json();
         })

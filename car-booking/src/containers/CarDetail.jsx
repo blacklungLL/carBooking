@@ -12,7 +12,7 @@ const CarDetail = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5156/api/Cars/${id}`)
+    fetch(`http://efimov.somee.com/api/Cars/${id}`)
       .then((response) => response.json())
       .then((data) => setCars(data))
       .catch((error) => console.error("Ошибка при загрузке данных:", error));
@@ -66,7 +66,7 @@ const CarDetail = () => {
   const car = cardOfCar && cardOfCar.id === carId ? cardOfCar : null;
 
   useEffect(() =>{
-    fetch(`http://localhost:5156/api/Comments/Comment/${id}`)
+    fetch(`http://efimov.somee.com/api/Comments/Comment/${id}`)
     .then(async(response) =>{
       let data = await response.json();
       setReview(data);

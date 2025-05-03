@@ -12,7 +12,7 @@ const Payment = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:5156/api/Cars/${id}`)
+        fetch(`http://efimov.somee.com/api/Cars/${id}`)
             .then((response) => response.json())
             .then((data) => setCars(data))
             .catch((error) => console.error("Ошибка при загрузке данных:", error));
