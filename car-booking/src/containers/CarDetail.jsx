@@ -66,7 +66,7 @@ const CarDetail = () => {
   const car = cardOfCar && cardOfCar.id === carId ? cardOfCar : null;
 
   useEffect(() =>{
-    fetch(`http://efimov.somee.com/api/Comments/Comment/${id}`)
+    fetch(`http://www.efimov.somee.com/api/api/Comments/Comment/${id}`)
     .then(async(response) =>{
       let data = await response.json();
       setReview(data);
