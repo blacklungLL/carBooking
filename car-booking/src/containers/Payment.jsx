@@ -12,7 +12,7 @@ const Payment = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`http://www.efimov.somee.com/api/api/Cars/${id}`)
+        fetch(`http://79.137.192.67:9999/api/Cars/${id}`)
             .then((response) => response.json())
             .then((data) => setCars(data))
             .catch((error) => console.error("Ошибка при загрузке данных:", error));

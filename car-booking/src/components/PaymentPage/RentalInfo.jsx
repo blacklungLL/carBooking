@@ -23,7 +23,7 @@ const RentalInfo = () => {
 
         <div className="mb-4">
           <div className="form-check mb-3">
-            <img src='/src/assets/mark.png'/>
+            <img src='../assets/images/mark.png'/>
             <label className="form-check-label ml-2" htmlFor="pickUp">
               Pick-Up
             </label>
@@ -77,7 +77,7 @@ const RentalInfo = () => {
 
         <div>
           <div className="form-check mb-3">
-            <img src='/src/assets/drop-off-icon.png' style={{height: '16px', width: '16px'}}/>
+            <img src='../assets/images/drop-off-icon.png' style={{height: '16px', width: '16px'}}/>
             <label className="form-check-label ml-2" htmlFor="dropOff">
               Drop-Off
             </label>

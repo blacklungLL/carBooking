@@ -42,7 +42,7 @@ body {
     letter-spacing: -2%;
     text-align: justify;
     vertical-align: middle;
-    background-image: url('/src/assets/search-normal.svg'), url('/src/assets/setting-4.svg');
+    background-image: url('../assets/images/search-normal.svg'), url('../assets/images/setting-4.svg');
     background-repeat: no-repeat;
     background-position: 10px center, calc(100% - 10px) center;
     background-size: 20px, 20px;
@@ -176,7 +176,7 @@ body {
     padding: 0.1px 0px 0px 0px;
     border-radius: 10px;
     background-color: #54A6FF;
-    background-image: url(src/assets/image_7.png);
+    background-image: url('../assets/images/image_7.png');
 }
 
 .ads {
@@ -231,7 +231,7 @@ body {
     padding: 0.1px 0px 0px 0px;
     border-radius: 10px;
     background-color: #3563E9;
-    background-image: url(src/assets/image_8.png);
+    background-image: url('../assets/images/image_8.png');
 }
 
 .ads_for_2 {
@@ -347,7 +347,7 @@ body {
     display: flex;
     width: 4px; /* Ширина разделителя */
     height: 50px; /* Высота разделителя */
-    background-image: url('src/assets/divider-icon.png'); /* Путь к вашему изображению */
+    background-image: url('../assets/images/divider-icon.png'); /* Путь к вашему изображению */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

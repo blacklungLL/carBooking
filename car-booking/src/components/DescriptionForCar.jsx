@@ -19,8 +19,8 @@ const CarInfo = ({ car }) => {
             {/* Миниатюры */}
             <div className="thumbnails d-flex gap-3 mt-3">
                 <img src={car.img} alt="Nissan GT-R Side" className="rounded" style={{ width: "170px", height: "130px", objectFit: "cover" }} />
-                <img src="/src/assets/View_2.png" alt="Nissan GT-R Interior" className="rounded" style={{ width: "170px", height: "130px", objectFit: "cover" }} />
-                <img src="/src/assets/View_3.png" alt="Nissan GT-R Seats" className="rounded" style={{ width: "170px", height: "130px", objectFit: "cover" }} />
+                <img src="../assets/images/View_2.png" alt="Nissan GT-R Interior" className="rounded" style={{ width: "170px", height: "130px", objectFit: "cover" }} />
+                <img src="../assets/images/View_3.png" alt="Nissan GT-R Seats" className="rounded" style={{ width: "170px", height: "130px", objectFit: "cover" }} />
             </div>
         </div>
 

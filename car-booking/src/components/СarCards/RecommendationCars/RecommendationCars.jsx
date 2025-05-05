@@ -4,7 +4,7 @@ import CarCard from "../CarCard/CarCard";
 const RecommendationCars = ({ searchQuery }) => {
   const [cardsOfCars, setCars] = useState([]);
   useEffect(() => {
-    fetch("http://www.efimov.somee.com/api/api/Cars/all")
+    fetch("http://79.137.192.67:9999/api/Cars/all")
       .then((response) => {
         return response.json();
       })

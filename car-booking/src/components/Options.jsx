@@ -4,7 +4,7 @@ const Options = () => {
     return (
         <section class="options">
                 <div class="form-group pick-up">
-                    <h3><img src="src/assets/pick-up-icon.png" alt="Pick-Up Icon"/> Pick - Up</h3>
+                    <h3><img src="../assets/images/pick-up-icon.png" alt="Pick-Up Icon"/> Pick - Up</h3>
                     <div class="form-fields">
                         <div class="field">
                             <label for="locations-pickup">Locations</label>
@@ -37,9 +37,9 @@ const Options = () => {
                         </div>
                     </div>
                 </div>
-                <button class="swap-button"><img src="src/assets/swap-icon.png" alt="Swap Icon"/></button>
+                <button class="swap-button"><img src="../assets/images/swap-icon.png" alt="Swap Icon"/></button>
                 <div class="form-group drop-off">
-                    <h3><img src="src/assets/drop-off-icon.png" alt="Drop-Off Icon"/> Drop - Off</h3>
+                    <h3><img src="../assets/images/drop-off-icon.png" alt="Drop-Off Icon"/> Drop - Off</h3>
                     <div class="form-fields">
                         <div class="field">
                             <label for="locations-dropoff">Locations</label>

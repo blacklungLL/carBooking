@@ -19,7 +19,7 @@ function CategoryCarCards({ searchQuery, activeTypes, activeCapacities, price })
       queryParams.set('name', searchQuery);
     }
 
-    fetch(`http://www.efimov.somee.com/api/api/Cars/filter?${queryParams.toString()}`)
+    fetch(`http://79.137.192.67:9999/api/Cars/filter?${queryParams.toString()}`)
       .then((response) => response.json())
       .then((data) => setCars(data))
       .catch((error) => console.error("Ошибка при загрузке данных:", error));

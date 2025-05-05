@@ -29,7 +29,7 @@ const Confirmation = () => {
 
       try {
           // Отправляем данные на сервер
-          const response = await fetch('http://localhost:5156/Email', {
+          const response = await fetch('http://79.137.192.67:9999/Email', {
               method: 'POST',
               body: formDataToSend, // Используем FormData
           });
@@ -94,7 +94,7 @@ const Confirmation = () => {
           <button type="submit" className="btn btn-primary w-25 mb-4">Rent Now</button>
 
           <div className="align-items-center mb-2">
-            <img className='mb-3' src='/src/assets/ic-security-safety.png' style={{height: '32px', width: '32px'}}/>
+            <img className='mb-3' src='../assets/images/ic-security-safety.png' style={{height: '32px', width: '32px'}}/>
             <p className="mb-0">All your data are safe</p>
           </div>
 
