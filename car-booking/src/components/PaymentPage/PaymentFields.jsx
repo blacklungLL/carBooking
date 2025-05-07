@@ -34,13 +34,13 @@ const PaymentFields = () => {
           <div className="form-check mb-3">
             <div className='d-flex justify-content-between' style={{gap: '10px'}}>
               <div>
-                <img src='../assets/images/mark.png' />
+                <img src='/assets/images/mark.png' />
                 <label className="form-check-label ml-2" htmlFor="creditCard">
                  Credit Card
                 </label>
               </div>
               <img
-                src="../assets/images/Visa.png"
+                src="/assets/images/Visa.png"
                 alt="Visa & Mastercard"
                 style={{ width: '100px' }}
               />

@@ -94,7 +94,7 @@ const Confirmation = () => {
           <button type="submit" className="btn btn-primary w-25 mb-4">Rent Now</button>
 
           <div className="align-items-center mb-2">
-            <img className='mb-3' src='../assets/images/ic-security-safety.png' style={{height: '32px', width: '32px'}}/>
+            <img className='mb-3' src='/assets/images/ic-security-safety.png' style={{height: '32px', width: '32px'}}/>
             <p className="mb-0">All your data are safe</p>
           </div>
 

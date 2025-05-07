@@ -21,17 +21,17 @@ const Header = ({ searchQuery, setSearchQuery }) => {
             </div>
             <div class="Profile_And_Notification">
                 <button class="like">
-                    <img src="../assets/images/heart.png"/>
+                    <img src="/assets/images/heart.png"/>
                 </button>
                 <button class="notification">
                     <div class="notif"></div>
-                    <img src="../assets/images/notification.png"/>
+                    <img src="/assets/images/notification.png"/>
                 </button>
                 <button class="settings">
-                    <img src="../assets/images/setting-2.png"/>
+                    <img src="/assets/images/setting-2.png"/>
                 </button>
                 <div class="profile">
-                    <img src="../assets/images/profile.png" alt="profile" class="profile-image"/>
+                    <img src="/assets/images/profile.png" alt="profile" class="profile-image"/>
                 </div>
             </div>
         </header>

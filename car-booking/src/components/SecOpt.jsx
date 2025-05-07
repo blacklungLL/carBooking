@@ -37,9 +37,9 @@ const Options2 = () => {
                         </div>
                     </div>
                 </div>
-                <button class="swap-button"><img src="../assets/images/swap-icon.png" alt="Swap Icon" /></button>
+                <button class="swap-button"><img src="/assets/images/swap-icon.png" alt="Swap Icon" /></button>
                 <div class="form-group drop-off">
-                    <h3><img src="../assets/images/drop-off-icon.png" alt="Drop-Off Icon" /> Drop - Off</h3>
+                    <h3><img src="/assets/images/drop-off-icon.png" alt="Drop-Off Icon" /> Drop - Off</h3>
                     <div class="form-fields">
                         <div class="field">
                             <label for="locations-dropoff">Locations</label>
